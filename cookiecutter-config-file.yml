@@ -1,0 +1,13 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "ai-pet"
+  project_description: "Awesome `ai-pet` is an AI pet chat"
+  organization: "andeya"
+  license: "Apache Software License 2.0"
+  minimal_python_version: 3.9
+  github_name: "andeya"
+  email: "andeyalee@outlook.com"
+  version: "0.1.0"
+  line_length: "88"
+  create_example_template: "cli"
