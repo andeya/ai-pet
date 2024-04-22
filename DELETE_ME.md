@@ -12,25 +12,25 @@
 cd ai-pet && git init
 ```
 
-2. If you don't have `Poetry`. 
+2. If you don't have `Poetry`.
 
 Conda environment is is recommended.
 
 ```bash
-conda create -n ai-pet python==3.10
+conda create -n ai_pet python==3.10
 ```
 
 Please activate python of current project and install run:
 
 ```bash
-conda activate ai-pet
+conda activate ai_pet
 pip install poetry
 ```
 
 3. Initialize poetry and `pre-commit` hooks:
 
 ```bash
-make install
+make pre-commit-install
 ```
 
 If you obtain a timeout error when installing, you can try to append an image source config in `poetry.toml`. The following example is tsinghua image source.
@@ -67,15 +67,15 @@ When you create this repository, you have already set up the following bots, so 
 - [first-interaction](./.github/workflows/greetings.yml): will comment on the first issue or pull request from a new contributor. You can configure it in `.github/workflows/greetings.yml`.
 
 > ❗ **first-interaction** requires `pull_requests:write`, but by default `GITHUB_TOKEN` has this value set to read-only. You need to do the following to enable it:
+>
 > - Go to the repository settings
 > - Open the "Actions" tab
 > - Click on "Read and write permissions" and enable "Actions: Read and write permissions"
-> ![img.png](assets/images/img_1.png)
-
+>   ![img.png](assets/images/img_1.png)
 
 ### 1.3. Poetry
 
-This project use Poetry to manage dependencies. Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. 
+This project use Poetry to manage dependencies. Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
 Want to know more about Poetry? Check [its documentation](https://python-poetry.org/docs/).
 
@@ -90,6 +90,7 @@ Poetry's [commands](https://python-poetry.org/docs/cli/#commands) are very intui
 - `poetry publish --build` publish your package.
 
 etc
+
 </p>
 </details>
 
@@ -132,7 +133,7 @@ Articles:
 - [`Poetry`](https://python-poetry.org/) as the dependencies manager. See configuration in [`pyproject.toml`](https://github.com/andeya/ai-pet/blob/main/pyproject.toml) and [`setup.cfg`](https://github.com/andeya/ai-pet/blob/main/setup.cfg).
 - Faster formatter tool, automatic codestyle with [`ruff`](https://github.com/astral-sh/ruff) to replace [`black`](https://github.com/psf/black), [`isort`](https://github.com/timothycrosley/isort) and [`pyupgrade`](https://github.com/asottile/pyupgrade).
 - Ready-to-use [`pre-commit`](https://pre-commit.com/) hooks with code-formatting.
-- Type checks with  [`ruff`](https://github.com/astral-sh/ruff); docstring checks with [`darglint`](https://github.com/terrencepreilly/darglint); security checks with [`safety`](https://github.com/pyupio/safety) and [`bandit`](https://github.com/PyCQA/bandit)
+- Type checks with [`ruff`](https://github.com/astral-sh/ruff); docstring checks with [`darglint`](https://github.com/terrencepreilly/darglint); security checks with [`safety`](https://github.com/pyupio/safety) and [`bandit`](https://github.com/PyCQA/bandit)
 - Testing with [`pytest`](https://docs.pytest.org/en/latest/).
 - Ready-to-use [`.editorconfig`](https://github.com/andeya/ai-pet/blob/main/.editorconfig), [`.dockerignore`](https://github.com/andeya/ai-pet/blob/main/.dockerignore), and [`.gitignore`](https://github.com/andeya/ai-pet/blob/main/.gitignore). You don't have to worry about those things.
 
@@ -151,7 +152,6 @@ Articles:
 - Files such as: `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` are generated automatically.
 - [`Stale bot`](https://github.com/apps/stale) that closes abandoned issues after a period of inactivity. (You will only [need to setup free plan](https://github.com/marketplace/stale)). Configuration is [here](https://github.com/andeya/ai-pet/blob/main/.github/.stale.yml).
 - [Semantic Versions](https://semver.org/) specification with [`Release Drafter`](https://github.com/marketplace/actions/release-drafter).
-
 
 ## 📈 4. Releases
 
@@ -175,6 +175,5 @@ We use [`Release Drafter`](https://github.com/marketplace/actions/release-drafte
 You can update it in [`release-drafter.yml`](https://github.com/andeya/ai-pet/blob/main/.github/release-drafter.yml).
 
 GitHub creates the `bug`, `enhancement`, and `documentation` labels for you. Dependabot creates the `dependencies` label. Create the remaining labels on the Issues tab of your GitHub repository, when you need them.
-
 
 **👉 Remember delete this file after reading and operating the instructions.**

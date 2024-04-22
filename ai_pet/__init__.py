@@ -1,5 +1,9 @@
 # type: ignore[attr-defined]
-"""Awesome `ai-pet` is an AI pet chat"""
+"""
+Awesome `ai-pet` is a AI pet chat application.
+
+Top-level package for ai_pet.
+"""
 
 import sys
 
@@ -7,6 +11,8 @@ if sys.version_info >= (3, 8):
     from importlib import metadata as importlib_metadata
 else:
     import importlib_metadata
+
+__email__ = "andeyalee@outlook.com"
 
 
 def get_version() -> str:

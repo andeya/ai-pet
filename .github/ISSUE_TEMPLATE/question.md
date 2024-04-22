@@ -10,7 +10,7 @@ assignees:
 
 <!-- Mark with an `x` all the checkboxes that apply (like `[x]`) -->
 
-- [ ] I've searched the project's [`issues`](https://github.com/andeya/ai-pet/issues?q=is%3Aissue).
+- [ ] I've searched the project's [`issues`](https://github.com/andeya/ai-pet2/issues?q=is%3Aissue).
 
 ## ❓ Question
 

@@ -1,4 +1,4 @@
-# Docker for ai-pet
+# Docker for ai_pet
 
 ## Installation
 

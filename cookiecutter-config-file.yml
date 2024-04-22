@@ -2,12 +2,13 @@
 
 default_context:
   project_name: "ai-pet"
-  project_description: "Awesome `ai-pet` is an AI pet chat"
+  package_name: "ai_pet"
+  project_description: "Awesome `ai-pet` is a AI pet chat application"
   organization: "andeya"
   license: "Apache Software License 2.0"
-  minimal_python_version: 3.9
+  minimal_python_version: 3.8
   github_name: "andeya"
   email: "andeyalee@outlook.com"
   version: "0.1.0"
-  line_length: "88"
-  create_example_template: "cli"
+  line_length: "200"
+  project_mode: "bin"

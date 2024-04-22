@@ -7,8 +7,8 @@ First of all, you need to install `python3.8` or higher. We recommend create a n
 Create your conda environment, and then activate it:
 
 ```bash
-conda create -n ai-pet python=3.10
-conda activate ai-pet
+conda create -n ai_pet python=3.10
+conda activate ai_pet
 ```
 
 We use `poetry` to manage the [dependencies](https://github.com/python-poetry/poetry).

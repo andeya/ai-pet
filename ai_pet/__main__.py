@@ -7,7 +7,12 @@ import typer
 from rich.console import Console
 
 from ai_pet import version
+from ai_pet.config import app_config, logger, wrap_log
 from ai_pet.example import hello
+
+logger.info(f"{app_config}")
+
+hello = wrap_log(hello)
 
 
 class Color(str, Enum):
@@ -19,23 +24,25 @@ class Color(str, Enum):
     green = "green"
 
 
-app = typer.Typer(
-    name="ai-pet",
-    help="Awesome `ai-pet` is an AI pet chat",
-    add_completion=False,
-)
 console = Console()
 
 
 def version_callback(print_version: bool) -> None:
     """Print the version of the package."""
     if print_version:
-        console.print(f"[yellow]ai-pet[/] version: [bold blue]{version}[/]")
+        console.print(f"[yellow]ai_pet[/] version: [bold blue]{version}[/]")
         raise typer.Exit()
 
 
-@app.command(name="")
-def main(
+main = typer.Typer(
+    name="ai_pet",
+    help="Awesome `ai-pet` is a AI pet chat application",
+    add_completion=False,
+)
+
+
+@main.command(name="")
+def app(
     name: str = typer.Option(..., help="Person to greet."),
     color: Optional[Color] = typer.Option(
         None,
@@ -51,7 +58,7 @@ def main(
         "--version",
         callback=version_callback,
         is_eager=True,
-        help="Prints the version of the ai-pet package.",
+        help="Prints the version of the ai_pet package.",
     ),
 ) -> None:
     """Print a greeting with a giving name."""
@@ -63,4 +70,4 @@ def main(
 
 
 if __name__ == "__main__":
-    app()
+    main()

@@ -9,7 +9,7 @@ If you are first create this repository, please read [DELETE_ME.md](./DELETE_ME.
 <div align="center">
 
 [![Build status](https://github.com/andeya/ai-pet/workflows/build/badge.svg?branch=main&event=push)](https://github.com/andeya/ai-pet/actions?query=workflow%3Abuild)
-[![Python Version](https://img.shields.io/pypi/pyversions/ai-pet.svg)](https://pypi.org/project/ai-pet/)
+[![Python Version](https://img.shields.io/pypi/pyversions/ai_pet.svg)](https://pypi.org/project/ai_pet/)
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/andeya/ai-pet/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)[![Security: bandit](https://img.shields.io/badge/security-bandit-green.svg)](https://github.com/PyCQA/bandit)
@@ -18,7 +18,7 @@ If you are first create this repository, please read [DELETE_ME.md](./DELETE_ME.
 [![License](https://img.shields.io/github/license/andeya/ai-pet)](https://github.com/andeya/ai-pet/blob/main/LICENSE)
 ![Coverage Report](assets/images/coverage.svg)
 
-Awesome `ai-pet` is an AI pet chat
+Awesome `ai-pet` is a AI pet chat application
 
 </div>
 
@@ -27,26 +27,26 @@ Awesome `ai-pet` is an AI pet chat
 Conda package manager is recommended. Create a conda environment.
 
 ```bash
-conda create -n ai-pet python==3.10
+conda create -n ai_pet python==3.10
 ```
 
 Activate conda environment and install poetry
 
 ```bash
-conda activate ai-pet
+conda activate ai_pet
 pip install poetry
 ```
 
 Then you can run the client using the following command:
 
 ```bash
-ai-pet --help
+ai_pet --help
 ```
 
 or with `Poetry`:
 
-```bash
-poetry run ai-pet --help
+````bash
+poetry run ai_pet --help
 ```
 
 ### Makefile usage
@@ -62,7 +62,7 @@ Install requirements:
 
 ```bash
 make install
-```
+````
 
 Pre-commit hooks coulb be installed after `git init` via
 
@@ -168,7 +168,7 @@ Remove docker image with
 make docker-remove
 ```
 
-More information [about docker](https://github.com/Undertone0809/python-package-template/tree/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docker).
+More information [about docker](https://github.com/andeya/py-layout/tree/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docker).
 
 </p>
 </details>
@@ -218,9 +218,9 @@ This project is licensed under the terms of the `Apache Software License 2.0` li
 ## 📃 Citation
 
 ```bibtex
-@misc{ai-pet,
+@misc{ai_pet,
   author = {andeya},
-  title = {Awesome `ai-pet` is an AI pet chat},
+  title = {Awesome `ai-pet` is a AI pet chat application},
   year = {2024},
   publisher = {GitHub},
   journal = {GitHub repository},
@@ -228,6 +228,6 @@ This project is licensed under the terms of the `Apache Software License 2.0` li
 }
 ```
 
-## Credits [![🚀 Your next Python package needs a bleeding-edge project structure.](https://img.shields.io/badge/3PG-%F0%9F%9A%80-brightgreen)](https://github.com/Undertone0809/python-package-template)
+## Credits [![🚀 Your next Python package needs a bleeding-edge project structure.](https://img.shields.io/badge/py-layout-%F0%9F%9A%80-brightgreen)](https://github.com/andeya/py-layout)
 
-This project was generated with [`3PG`](https://github.com/Undertone0809/3PG)
+This project was generated with [`py-layout`](https://github.com/andeya/py-layout)
