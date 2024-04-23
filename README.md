@@ -1,9 +1,3 @@
-# Hey, Look at me! 👇
-
-**Please delete this part after you read it.**
-
-If you are first create this repository, please read [DELETE_ME.md](./DELETE_ME.md) to get started.
-
 # ai-pet
 
 <div align="center">
