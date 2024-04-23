@@ -40,7 +40,7 @@ priority = "primary"
 python = "^3.12"
 
 typer = {extras = ["all"], version = "^0.4.0"}
-rich = "^10.14.0"
+rich = "^13.7.1"
 
 [tool.poetry.dev-dependencies]
 packaging = "^23.1"
