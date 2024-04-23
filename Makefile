@@ -39,6 +39,8 @@ lock:
 
 install: lock
 	poetry install -n
+	make formatting
+
 pre-commit-install:
 	poetry run pre-commit install
 
