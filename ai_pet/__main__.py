@@ -1,73 +1,60 @@
 # type: ignore[attr-defined]
-from enum import Enum
-from random import choice
-from typing import Optional
+# Use a pipeline as a high-level helper
+from gpt4all import GPT4All
+from transformers import AutoModel, Pipeline, pipeline
 
-import typer
-from rich.console import Console
-
-from ai_pet import version
 from ai_pet.config import app_config, logger, wrap_log
-from ai_pet.example import hello
+from ai_pet.gpt4all_app import app
 
-logger.info(f"{app_config}")
-
-hello = wrap_log(hello)
+MODEL_ROOT = "/Users/andeya/Library/Application Support/nomic.ai/GPT4All/"
 
 
-class Color(str, Enum):
-    white = "white"
-    red = "red"
-    cyan = "cyan"
-    magenta = "magenta"
-    yellow = "yellow"
-    green = "green"
-
-
-console = Console()
-
-
-def version_callback(print_version: bool) -> None:
-    """Print the version of the package."""
-    if print_version:
-        console.print(f"[yellow]ai_pet[/] version: [bold blue]{version}[/]")
-        raise typer.Exit()
-
-
-main = typer.Typer(
-    name="ai_pet",
-    help="Awesome `ai-pet` is a AI pet chat application",
-    add_completion=False,
-)
-
-
-@main.command(name="")
-def app(
-    name: str = typer.Option(..., help="Person to greet."),
-    color: Optional[Color] = typer.Option(
-        None,
-        "-c",
-        "--color",
-        "--colour",
-        case_sensitive=False,
-        help="Color for print. If not specified then choice will be random.",
-    ),
-    print_version: bool = typer.Option(
-        None,
-        "-v",
-        "--version",
-        callback=version_callback,
-        is_eager=True,
-        help="Prints the version of the ai_pet package.",
-    ),
-) -> None:
-    """Print a greeting with a giving name."""
-    if color is None:
-        color = choice(list(Color))
-
-    greeting: str = hello(name)
-    console.print(f"[bold {color}]{greeting}[/]")
+def main():
+    app()
+    # chat = gpt4all_chat()
+    # while True:
+    #     user_input = input("User: ")  # 获取用户的输入
+    #     model_output = chat(user_input)
+    #     print(f"Bot: {model_output}")
 
 
 if __name__ == "__main__":
     main()
+
+
+def standard_chat():
+    model = AutoModel.from_pretrained(MODEL_ROOT + "phi-2.Q4_0.gguf")
+    pipe = pipeline(
+        "text-generation",
+        model=model,
+        trust_remote_code=True,
+    )
+
+    def chat(user_input: str) -> str:
+        return pipe(user_input)[0]["generated_text"]
+
+    return chat
+
+
+def gpt4all_chat():
+    """
+    https://pypi.org/project/gpt4all/
+    """
+    model_name = "phi-2.Q4_0.gguf"
+    model = GPT4All(model_name=model_name, model_path=MODEL_ROOT)
+
+    def chat(user_input: str) -> str:
+        response_generator = model.generate(
+            user_input,
+            max_tokens=1000,
+            temp=0.9,
+            top_k=40,
+            top_p=0.9,
+            min_p=0.0,
+            repeat_penalty=1.1,
+            repeat_last_n=64,
+            n_batch=9,
+        )
+        return response_generator
+
+    return chat

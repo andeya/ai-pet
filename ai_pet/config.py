@@ -43,9 +43,7 @@ def wrap_log(func):
             return result
         except Exception as exp:
             logger.info(f"Aborted function {func.__name__}")
-            logger.exception(
-                f"Exception raised in {func.__name__}. exception: {str(exp)}"
-            )
+            logger.exception(f"Exception raised in {func.__name__}. exception: {str(exp)}")
             raise exp
 
     return wrapper

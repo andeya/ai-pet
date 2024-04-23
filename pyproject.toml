@@ -14,10 +14,10 @@ repository = "https://github.com/andeya/ai-pet"
 homepage = "https://github.com/andeya/ai-pet"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
-keywords = []  #! Update me
+keywords = [] #! Update me
 
 # Pypi classifiers: https://pypi.org/classifiers/
-classifiers = [  #! Update me
+classifiers = [ #! Update me
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
@@ -39,8 +39,11 @@ priority = "primary"
 [tool.poetry.dependencies]
 python = "^3.12"
 
-typer = {extras = ["all"], version = "^0.4.0"}
+typer = { extras = ["all"], version = "^0.4.0" }
 rich = "^10.14.0"
+transformers = "^4.40.0"
+torch = "^2.2.2"
+gpt4all = "^2.5.1"
 
 [tool.poetry.dev-dependencies]
 packaging = "^23.1"
@@ -67,7 +70,7 @@ darglint = "^1.8.1"
 
 [tool.ruff]
 # https://docs.astral.sh/ruff/settings
-line-length = 88
+line-length = 120
 
 # Exclude a variety of commonly ignored directories.
 respect-gitignore = true
@@ -100,7 +103,7 @@ exclude = [
 ignore-init-module-imports = true
 select = ["E", "W", "F", "I"]
 extend-select = ["I"]
-ignore = ["F401"]
+ignore = ["F401", "E722"]
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.
@@ -123,8 +126,22 @@ docstring-code-line-length = 60
 [tool.pytest.ini_options]
 # https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
 # Directories that are not visited by pytest collector:
-norecursedirs =["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
-doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
+norecursedirs = [
+  "hooks",
+  "*.egg",
+  ".eggs",
+  "dist",
+  "build",
+  "docs",
+  ".tox",
+  ".git",
+  "__pycache__",
+]
+doctest_optionflags = [
+  "NUMBER",
+  "NORMALIZE_WHITESPACE",
+  "IGNORE_EXCEPTION_DETAIL",
+]
 
 # Extra options:
 addopts = [
