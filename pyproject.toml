@@ -43,7 +43,7 @@ typer = { extras = ["all"], version = "^0.4.0" }
 rich = "^10.14.0"
 transformers = "^4.40.0"
 torch = "^2.2.2"
-gpt4all = "^2.5.1"
+gpt4all = "^2.6.0"
 
 [tool.poetry.dev-dependencies]
 packaging = "^23.1"

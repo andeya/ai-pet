@@ -809,14 +809,14 @@ reference = "tsinghua"
 
 [[package]]
 name = "gpt4all"
-version = "2.5.1"
+version = "2.6.0"
 description = "Python bindings for GPT4All"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "gpt4all-2.5.1-py3-none-macosx_10_15_universal2.whl", hash = "sha256:c865df2076b3c7863b51e4d0121023d6c3d2e60ba2d1df3d6b49c2222f4fbb72"},
-    {file = "gpt4all-2.5.1-py3-none-manylinux1_x86_64.whl", hash = "sha256:50c41cf0b5cd1c5701d67075f002aa924abd3a99cf6f9f41864c78f65abb8cd0"},
-    {file = "gpt4all-2.5.1-py3-none-win_amd64.whl", hash = "sha256:28b3d2dbc0dcdb731ade227a098cbba8201f98bb9871811fa656811e93302737"},
+    {file = "gpt4all-2.6.0-py3-none-macosx_10_15_universal2.whl", hash = "sha256:2d750cf20a3dbfd9ed0ffbd780161eb2720ae923130e8a259e9dcc9a9b108983"},
+    {file = "gpt4all-2.6.0-py3-none-manylinux1_x86_64.whl", hash = "sha256:506a0e0089044e36e0a0792cd7abba0e2f688669101bc927b8bae4f82409dcec"},
+    {file = "gpt4all-2.6.0-py3-none-win_amd64.whl", hash = "sha256:997c40a4c9ef639eef74861d9eb731e80be29ac8a455b2530df98fdeded6557f"},
 ]
 
 [package.dependencies]
@@ -2293,7 +2293,7 @@ reference = "tsinghua"
 [[package]]
 name = "pyyaml-env-tag"
 version = "0.1"
-description = "A custom YAML tag for referencing environment variables in YAML files. "
+description = "A custom YAML tag for referencing environment variables in YAML files."
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -3529,4 +3529,4 @@ reference = "tsinghua"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "c4c5e2790f674446a65d326827d7b2354ed4337b9a42e164f2ec9d735cef0e44"
+content-hash = "3c1f7c82e3e5d4b13cdc4389d3146c7df2e20c846f74a43653fdbb404804342b"
