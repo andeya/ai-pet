@@ -65,7 +65,7 @@ mkdocs-autorefs = "1.0.1"
 pre-commit = "^2.21.0"
 coverage = "^6.1.2"
 coverage-badge = "^1.1.0"
-safety = "^2.3.5"
+safety = "^3.2.2"
 darglint = "^1.8.1"
 
 [tool.ruff]
