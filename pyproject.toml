@@ -52,7 +52,7 @@ pytest = "^8.1.1"
 pytest-html = "^4.1.1"
 pytest-cov = "^5.0.0"
 bandit = "^1.7.1"
-ruff = "^0.2.0"
+ruff = "^0.4.8"
 
 mkdocs = "1.5.3"
 mkdocs-include-markdown-plugin = "6.0.5"
