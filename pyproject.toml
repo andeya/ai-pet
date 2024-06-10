@@ -46,7 +46,7 @@ torch = "^2.2.2"
 gpt4all = "^2.5.1"
 
 [tool.poetry.dev-dependencies]
-packaging = "^23.1"
+packaging = "^24.1"
 poetry-plugin-export = "^1.7.1"
 pytest = "^8.1.1"
 pytest-html = "^4.1.1"
