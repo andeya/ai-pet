@@ -1240,13 +1240,13 @@ reference = "tsinghua"
 
 [[package]]
 name = "mkdocs-include-markdown-plugin"
-version = "6.0.5"
+version = "6.2.0"
 description = "Mkdocs Markdown includer plugin."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocs_include_markdown_plugin-6.0.5-py3-none-any.whl", hash = "sha256:db41aa1937a618afa3497616f457d4e51d9123b13b2034bb15505ff9ce061f86"},
-    {file = "mkdocs_include_markdown_plugin-6.0.5.tar.gz", hash = "sha256:ad10779cf0dc4ff180aaa0079163271877b3c2fd31e36d5579854fe1d4b0d1ae"},
+    {file = "mkdocs_include_markdown_plugin-6.2.0-py3-none-any.whl", hash = "sha256:32f03b127369b79df803eca2490e5564e38ae72108d6a4292f3717ca684ed1fc"},
+    {file = "mkdocs_include_markdown_plugin-6.2.0.tar.gz", hash = "sha256:c9f63eeebc0e34d64236c88f3cf6696c03ca99d74e4b57fe86701e8942d53ba5"},
 ]
 
 [package.dependencies]
@@ -2293,7 +2293,7 @@ reference = "tsinghua"
 [[package]]
 name = "pyyaml-env-tag"
 version = "0.1"
-description = "A custom YAML tag for referencing environment variables in YAML files. "
+description = "A custom YAML tag for referencing environment variables in YAML files."
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -3529,4 +3529,4 @@ reference = "tsinghua"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "c4c5e2790f674446a65d326827d7b2354ed4337b9a42e164f2ec9d735cef0e44"
+content-hash = "e453e158e17351cd143918db6d44e6f5718969489545bb53c4c105ff4c0a232e"
